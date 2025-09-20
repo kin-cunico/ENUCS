@@ -87,10 +87,33 @@ namespace ENUCS.Week2
                     Console.WriteLine("Error: Matriculation number must start with a 4. Please try again. ");
                 }
             }
+            // NOTE that the print statement below MUST be outside the while loop,
+            // otherwise it will print the message every time the user enters an invalid matriculation number
+            // I made this mistake in my first attempt
             Console.WriteLine($"Hello {name}, your matriculation number is {matNumber}.");
         }
 
+        /* Q4. Modify your program to check that your matriculation number is 8 digits long, 
+         * if it is > than 8 digits print "Number too long" if it is less than 8 digits print "Number too short".
+         * 
+         * NOTE: since we will only compare 3 conditions (> 8, < 8, == 8), we can use an if statement,
+         * however, if we were to compare many different cases,
+         * we could use a switch statement instead.
+         * Since I don't know if we will study switch statements later in the module,
+         * I will link a page about switch statements here: https://www.w3schools.com/cs/cs_switch.php
+         */
+
         public static void Q4()
+        {
+            // TO DO
+        }
+
+        public static void Q5()
+        {
+            // TO DO
+        }
+
+        public static void Q6()
         {
             // TO DO
         }
