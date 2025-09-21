@@ -105,7 +105,82 @@ namespace ENUCS.Week2
 
         public static void Q4()
         {
-            // TO DO
+            /** This was probably the hardest so far. I solved it with 2 while loops and 2 if statements nested
+             * I do believe there is a better way to do this, maybe by checking both at the same time?
+             * NOTE: I initialized 2 booleans to check both conditions, I could have just used the while (false)
+             * and then return true when the conditions are met, but I think that having a variable that keeps track
+             * of the state is clearer when reading back the code.
+             * 
+             */
+
+            // THE CODE BELOW DOES NOT WORK
+            // bool startsWith4 = false;
+            // bool has8digits = false;
+            // This will keep running until POINT 4 is reached
+            //while (!startsWith4)
+            //{
+            //    // POINT 1: if the matriculation number starts with 4, we enter the first loop
+            //    if (matNumber.StartsWith("4"))
+            //    {
+            //        // POINT 2: now we keep track of whether the matriculation number has 8 digits
+            //        while (!has8digits)
+            //        {
+            //            // POINT 3: WAIT, this doesn't work because now I ignore the check for POINT 1.
+            //            if (matNumber.Length < 8)
+            //            {
+            //                Console.WriteLine("Number too short. Your matriculation number is 8 digits long. Try again below: ");
+            //                matNumber = Console.ReadLine();
+            //            }
+            //            else if (matNumber.Length > 8)
+            //            {
+            //                Console.WriteLine("Number too long. Your matriculation number is 8 digits long. Try again below: ");
+            //                matNumber = Console.ReadLine();
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine($"Your matriculation number is {matNumber}");
+            //                has8digits = true;
+            //            }
+            //        }
+            //        startsWith4 = true;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Error: Matriculation number must start with a 4. Please try again below: ");
+            //        matNumber = Console.ReadLine();
+            //    }
+            //}
+
+            Console.WriteLine("Please, enter your matriculation number below: ");
+            string matNumber;
+            bool isValid = false;
+
+            // In retrospective this is way easier that what I was thinking
+            // I made it too complicate by trying to be smart about it
+            // I could still use switch cases here, though
+
+            while (!isValid)
+            {
+                matNumber = Console.ReadLine();
+
+                if (!matNumber.StartsWith("4"))
+                {
+                    Console.WriteLine("Error: Matriculation number must start with a 4. Please try again below:  ");
+                    continue;
+                }
+                if (matNumber.Length < 8)
+                {
+                    Console.WriteLine("Number too short. Your matriculation number is 8 digits long. Try again below: ");
+                    continue;
+                }
+                if (matNumber.Length > 8)
+                {
+                    Console.WriteLine("Number too long. Your matriculation number is 8 digits long. Try again below: ");
+                    continue;
+                }
+                Console.WriteLine($"Your matriculation number is {matNumber}");
+                isValid = true;
+            }
         }
 
         public static void Q5()

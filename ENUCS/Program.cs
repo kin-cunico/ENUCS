@@ -9,6 +9,7 @@ class Program
     {
         // Week2.Q1();
         // Week2.Q2();
-        Week2.Q3();
+        // Week2.Q3();
+        Week2.Q4();
     }
 }
